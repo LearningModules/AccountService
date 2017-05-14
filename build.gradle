@@ -8,6 +8,8 @@ sourceCompatibility = 1.5
 
 repositories {
     mavenCentral()
+    maven { url "https://repo.spring.io/libs-release" }
+
 }
 
 dependencies {
@@ -20,6 +22,14 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.3.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.3.RELEASE'
     compile group: 'com.h2database', name: 'h2', version: '1.4.195'
+
+    //Spring data JPA
+    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.11.3.RELEASE'
+
+
+    compile group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: '1.9.13'
+
+
 
 
     compile 'org.codehaus.groovy:groovy-all:2.3.11'

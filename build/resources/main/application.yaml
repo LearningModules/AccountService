@@ -1,0 +1,6 @@
+spring.jpa.generate-ddl: true
+#logging.level.org.springframework.boot.autoconfigure.security: INFO
+
+spring.h2.console.enabled: true
+spring.h2.console.path: /h2
+

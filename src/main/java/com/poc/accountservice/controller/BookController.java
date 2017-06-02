@@ -24,6 +24,7 @@ import java.util.List;
 public class BookController {
     @Autowired
     BookService bookService;
+
     @RequestMapping(value = "/books", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Book>> getAllBooks(){
         return new ResponseEntity<List<Book>>(bookService.retrieveAllBooks(),HttpStatus.OK);

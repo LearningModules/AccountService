@@ -7,8 +7,8 @@ import java.util.Date;
 /**
  * Created by z001nlh on 5/14/17.
  */
-@Entity
-@Table(name = "T_CONTACTS")
+//@Entity
+//@Table(name = "T_CONTACTS")
 public class Contact implements Serializable{
 
     private static final long serialVersionUID = 1L;

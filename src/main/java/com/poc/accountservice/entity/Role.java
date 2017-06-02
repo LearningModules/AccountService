@@ -6,8 +6,8 @@ import java.io.Serializable;
 /**
  * Created by z001nlh on 5/14/17.
  */
-@Entity
-@Table(name = "T_ROLES")
+//@Entity
+//@Table(name = "T_ROLES")
 public class Role implements Serializable{
 
     private static final long serialVersionUID = 1L;

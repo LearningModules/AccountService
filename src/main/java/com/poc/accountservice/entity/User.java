@@ -7,8 +7,8 @@ import java.util.*;
 /**
  * Created by z001nlh on 5/14/17.
  */
-@Entity
-@Table(name = "T_USERS")
+//@Entity
+//@Table(name = "T_USERS")
 public class User implements Serializable{
 
     private static final long serialVersionUID = 1L;

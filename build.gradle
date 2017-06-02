@@ -29,6 +29,12 @@ dependencies {
 
     compile group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: '1.9.13'
 
+    compile group: 'postgresql', name: 'postgresql', version: '9.2-1002.jdbc4'
+
+
+    compile group: 'hsqldb', name: 'hsqldb', version: '1.8.0.10'
+
+
 
 
 

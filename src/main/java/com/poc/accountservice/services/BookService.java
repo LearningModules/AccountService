@@ -1,6 +1,6 @@
 package com.poc.accountservice.services;
 
-import com.poc.accountservice.entity.Book;
+import com.poc.accountservice.entity.book.Book;
 import com.poc.accountservice.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,6 +18,7 @@ public class BookService {
 
     public List<Book> retrieveAllBooks()
     {
+        System.out.println("books retrieved ="+bookRepository.findAll().size());
         return  bookRepository.findAll();
     }
 }

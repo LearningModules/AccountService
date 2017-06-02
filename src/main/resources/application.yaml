@@ -7,7 +7,7 @@ spring.jpa.generate-ddl: true
 
 
 logging:
-  level: INFO
+  level: DEBUG
 
 #spring:
 #  datasource:

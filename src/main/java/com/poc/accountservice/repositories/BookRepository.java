@@ -1,6 +1,6 @@
 package com.poc.accountservice.repositories;
 
-import com.poc.accountservice.entity.Book;
+import com.poc.accountservice.entity.book.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;

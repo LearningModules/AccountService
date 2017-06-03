@@ -21,4 +21,10 @@ public class BookService {
         System.out.println("books retrieved ="+bookRepository.findAll().size());
         return  bookRepository.findAll();
     }
+
+    public Book saveBook(Book book)
+    {
+        System.out.println("Book added "+book.getAuthor());
+        return  bookRepository.saveAndFlush(book);
+    }
 }

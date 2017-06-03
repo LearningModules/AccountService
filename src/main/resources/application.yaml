@@ -9,7 +9,7 @@ spring.jpa.generate-ddl: true
 logging:
   level: DEBUG
 
-server.port: 8080
+server.port: 8081
 
 #spring:
 #  datasource:

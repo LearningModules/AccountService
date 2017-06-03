@@ -15,4 +15,5 @@ import java.util.List;
 public interface BookRepository extends JpaRepository<Book,Long>{
     List<Book> findAll();
     Book findByAuthor(String author);
+    Book saveAndFlush(Book book);
 }

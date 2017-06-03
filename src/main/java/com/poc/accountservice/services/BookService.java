@@ -27,4 +27,10 @@ public class BookService {
         System.out.println("Book added "+book.getAuthor());
         return  bookRepository.saveAndFlush(book);
     }
+
+    public Book getBookDetails(Integer bookId)
+    {
+        System.out.println("Getting for book ID "+bookId);
+        return  bookRepository.findOne(bookId);
+    }
 }

@@ -7,10 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 /**
@@ -31,5 +29,10 @@ public class BookController {
     @RequestMapping(value = "/books", method = RequestMethod.PUT)
     public ResponseEntity createABook(@RequestBody Book book){
         return new ResponseEntity<Book>(bookService.saveBook(book),HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/books/{bookId}", method = RequestMethod.GET)
+    public ResponseEntity createABook(@PathVariable("bookId") Integer bookId){
+        return new ResponseEntity<Book>(bookService.getBookDetails(bookId),HttpStatus.OK);
     }
 }

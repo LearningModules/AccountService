@@ -12,8 +12,10 @@ import java.util.List;
  */
 @Repository
 @RepositoryRestResource(collectionResourceRel = "book", path = "book")
-public interface BookRepository extends JpaRepository<Book,Long>{
+public interface BookRepository extends JpaRepository<Book,Integer>{
     List<Book> findAll();
     Book findByAuthor(String author);
     Book saveAndFlush(Book book);
+
+    Book findOne(Integer bookId);
 }

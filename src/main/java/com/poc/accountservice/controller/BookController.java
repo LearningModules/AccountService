@@ -35,4 +35,16 @@ public class BookController {
     public ResponseEntity createABook(@PathVariable("bookId") Integer bookId){
         return new ResponseEntity<Book>(bookService.getBookDetails(bookId),HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/books/{bookId}", method = RequestMethod.POST)
+    public ResponseEntity updateABook(@RequestBody Book book,@PathVariable("bookId") Integer bookId){
+        Book existingBookRecord=bookService.getBookDetails(bookId);
+        if(existingBookRecord == null)
+            return new ResponseEntity<String>("Please provide a valid bookId",HttpStatus.NOT_FOUND);
+
+        book.setBookId(existingBookRecord.getBookId());
+        bookService.saveBook(book);
+
+        return new ResponseEntity<Book>(book,HttpStatus.OK);
+    }
 }

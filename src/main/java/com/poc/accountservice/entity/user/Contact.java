@@ -1,4 +1,4 @@
-package com.poc.accountservice.entity;
+package com.poc.accountservice.entity.user;
 
 import javax.persistence.*;
 import java.io.Serializable;

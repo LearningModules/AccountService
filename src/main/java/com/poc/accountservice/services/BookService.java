@@ -21,7 +21,6 @@ public class BookService {
         System.out.println("books retrieved ="+bookRepository.findAll().size());
         return  bookRepository.findAll();
     }
-
     public Book saveBook(Book book)
     {
         System.out.println("Book added "+book.getAuthor());
@@ -36,7 +35,7 @@ public class BookService {
 
     public int deleteBook(Integer bookId)
     {
-        System.out.println("Deleting Book ID -"+bookId);
+        System.out.println("Deleting Book ID - "+bookId);
         return bookRepository.deleteByBookId(bookId);
     }
 }

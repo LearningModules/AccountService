@@ -47,4 +47,15 @@ public class BookController {
 
         return new ResponseEntity<Book>(book,HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/books/{bookId}", method = RequestMethod.DELETE)
+    public ResponseEntity deleteABook(@PathVariable("bookId") Integer bookId){
+
+        if(bookService.deleteBook(bookId) == 0)
+            return new ResponseEntity<String>("Please provide a valid bookId",HttpStatus.NOT_FOUND);
+
+        return new ResponseEntity<String>("Book details deleted",HttpStatus.OK);
+    }
+
+
 }

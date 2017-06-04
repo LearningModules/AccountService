@@ -33,4 +33,10 @@ public class BookService {
         System.out.println("Getting for book ID "+bookId);
         return  bookRepository.findOne(bookId);
     }
+
+    public int deleteBook(Integer bookId)
+    {
+        System.out.println("Deleting Book ID -"+bookId);
+        return bookRepository.deleteByBookId(bookId);
+    }
 }
